@@ -21,22 +21,22 @@ public class PostController {
         return postService.getAllPosts();
     }
 
-    @GetMapping(path= "/{id}")
+    @GetMapping( "/{id}")
     public Optional<Post> getPostById(@PathVariable Long id) {
         return postService.getPostById(id);
     }
 
-    @GetMapping(path= "/{user}")
+    @GetMapping("/{user}")
     public List<Post> getPostByUSer(@PathVariable User user) {
         return postService.getPostByUSer(user);
     }
 
-    @PostMapping(path= "/addPost")
+    @PostMapping("/addPost")
     public Post createPost(@RequestBody  Post post) {
         return postService.savePost(post);
     }
 
-    @PutMapping(path= "/{id}")
+    @PutMapping("/{id}")
     public Post updatePost(@PathVariable Long id, @RequestBody Post postDetails) {
         Optional<Post> optPost = postService.getPostById(id);
         Post existingPost= optPost.get();
@@ -46,7 +46,7 @@ public class PostController {
         return postService.savePost(existingPost);
     }
 
-    @DeleteMapping(path= "/{id}")
+    @DeleteMapping("/{id}")
     public void deletePost(@PathVariable Long id){
         postService.deletePost(id);
     }

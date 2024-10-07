@@ -23,7 +23,7 @@ public class CommentController {
        return commentService.getAllComments() ;
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping( "/{id}")
     public Comment getCommentById(@PathVariable Long id){
         return commentService.getCommentById(id).get();
     }
@@ -33,19 +33,19 @@ public class CommentController {
         return commentService.getCommentByPost(post);
     }
 
-    @PostMapping(path = "/addComment")
+    @PostMapping("/addComment")
     public Comment createComment(@RequestBody Comment comment){
           return commentService.saveComment(comment);
     }
 
-    @PutMapping(path = "/{id}")
+    @PutMapping("/{id}")
     public Comment updateComment(@PathVariable Long id, @RequestBody Comment commentDetails){
         Optional<Comment> optComment=commentService.getCommentById(id);
         Comment existingComment=optComment.get();
         existingComment.setContent(commentDetails.getContent());
         return commentService.saveComment(existingComment);
     }
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping( "/{id}")
     public void deleteComment(@PathVariable Long id){
         commentService.deleteComment(id);
     }

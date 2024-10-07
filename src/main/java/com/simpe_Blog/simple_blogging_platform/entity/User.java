@@ -9,10 +9,10 @@ import java.io.Serializable;
 @Entity
 @Data
 @Table(name = "user")
-public class User implements Serializable {
+public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String username;

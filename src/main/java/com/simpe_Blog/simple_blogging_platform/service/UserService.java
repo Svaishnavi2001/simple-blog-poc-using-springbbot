@@ -4,6 +4,8 @@ import com.simpe_Blog.simple_blogging_platform.entity.User;
 import com.simpe_Blog.simple_blogging_platform.respository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 

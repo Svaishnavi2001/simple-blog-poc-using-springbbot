@@ -3,14 +3,16 @@ package com.simpe_Blog.simple_blogging_platform.service;
 import com.simpe_Blog.simple_blogging_platform.entity.Category;
 import com.simpe_Blog.simple_blogging_platform.entity.Comment;
 import com.simpe_Blog.simple_blogging_platform.respository.CategoryRepository;
+import org.hibernate.service.spi.ServiceInitiator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CategoryService {
+public class CategoryService{
 
     @Autowired
     private CategoryRepository categoryRepository;

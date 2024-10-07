@@ -2,11 +2,8 @@ package com.simpe_Blog.simple_blogging_platform.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
 
 @Entity
 @Data
@@ -23,9 +20,9 @@ public class Post {
     private User user;
 
     @ElementCollection
-    private Set<Category> categories=new HashSet<>();
+    private List<Category> categories;
 
     @ElementCollection
-    private List<Comment> Comments=new ArrayList<>();
+    private List<Comment> Comments;
 
 }

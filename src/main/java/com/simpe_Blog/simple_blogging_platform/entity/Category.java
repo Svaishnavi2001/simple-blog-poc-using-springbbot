@@ -2,15 +2,13 @@ package com.simpe_Blog.simple_blogging_platform.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Data
 @Table(name = "category")
-public class Category implements Serializable {
+public class Category  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +21,7 @@ public class Category implements Serializable {
     private  Comment comment;
 
     @ManyToMany
-    private Set<Post> posts=new HashSet<>();
+    private List<Post> posts;
 
 
 }

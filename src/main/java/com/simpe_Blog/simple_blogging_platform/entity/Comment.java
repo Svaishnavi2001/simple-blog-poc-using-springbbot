@@ -1,6 +1,5 @@
 package com.simpe_Blog.simple_blogging_platform.entity;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 

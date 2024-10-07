@@ -21,22 +21,22 @@ public class CategoryController {
         return categoryService.getAllCategories();
     }
 
-    @GetMapping(path= "/{id}")
+    @GetMapping("/{id}")
     public Optional<Category> getCategoryById(@PathVariable Long id) {
         return categoryService.getCategoryById(id);
     }
 
-    @GetMapping(path= "/{comment}")
+    @GetMapping("/{comment}")
     public List<Category> getCategoryByComment(@PathVariable Comment comment){
         return categoryService.getCategoryByComment(comment);
     }
 
-    @PostMapping(path="/addCategory")
+    @PostMapping("/addCategory")
     public Category CreateCategory(@RequestBody Category  category){
         return categoryService.savecategory(category);
     }
 
-    @DeleteMapping(path= "/{id}")
+    @DeleteMapping("/{id}")
     public void deleteCategory(@PathVariable Long id){
         categoryService.deleteCategory(id);
     }
